@@ -48,7 +48,7 @@ clean: start
 
 fclean: clean
 	@echo "\033[K$(CY)[QUINE] :$(CE) $(CG)Cleaning binary files$(CE)";
-	@/bin/rm -rf Sully/Sully Colleen/Colleen Grace/Grace Sully/Sully_* Grace/Grace_kid.s
+	@/bin/rm -rf Sully/Sully Colleen/Colleen Grace/Grace Sully/Sully_* Grace/Grace_kid.c
 
 re: fclean all
 
