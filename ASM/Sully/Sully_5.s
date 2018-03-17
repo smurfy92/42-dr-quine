@@ -15,7 +15,7 @@ extern _system
 _main:
 push rbp
 mov rbp, rsp
-mov r12, 6
+mov r12, 5
 call check
 sub rsp , 16
 lea rdi, [rel rsp]
