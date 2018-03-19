@@ -16,15 +16,15 @@ all: start Colleen Grace Sully
 
 Colleen: $(OBJ_C)
 	@echo "$(CY)[QUINE] :$(CE) $(CG)Compiling Colleen ...$(CE)";
-	@gcc $(OBJ_C) -o Colleen/Colleen
+	@clang $(OBJ_C) -o Colleen/Colleen
 
 Grace: $(OBJ_G)
 	@echo "$(CY)[QUINE] :$(CE) $(CG)Compiling Grace ...$(CE)";
-	@gcc $(OBJ_G) -o Grace/Grace
+	@clang $(OBJ_G) -o Grace/Grace
 
 Sully: $(OBJ_S)
 	@echo "$(CY)[QUINE] :$(CE) $(CG)Compiling Sully ...$(CE)";
-	@gcc $(OBJ_S) -o Sully/Sully
+	@clang $(OBJ_S) -o Sully/Sully
 
 start:
 	@echo "\n";
@@ -40,7 +40,7 @@ start:
 
 %.o: %.s
 	@echo "$(CY)[QUINE] :$(CE) $(CG)Compiling $<$(CE)";
-	@gcc $(FLAG) -c $< -o $@ $(INC)
+	@clang $(FLAG) -c $< -o $@ $(INC)
 
 clean: start
 	@echo "\033[K$(CY)[QUINE] :$(CE) $(CG)Cleaning object files$(CE)";
