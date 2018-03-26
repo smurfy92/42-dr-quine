@@ -12,6 +12,7 @@ global _main
 extern _dprintf
 extern _sprintf
 extern _system
+extern _exit
 _main:
 push rbp
 mov rbp, rsp
@@ -41,6 +42,8 @@ ja execution
 leave
 ret
 check:
+cmp r12, 0x0
+jl end
 lea rdi, [rel hello.security]
 mov rsi, 0
 mov rax, 0x2000021
@@ -49,6 +52,9 @@ jae titi
 ret
 titi:
 dec r12
+ret
+end:
+leave
 ret
 execution:
 lea rdx, [rel rsp]
